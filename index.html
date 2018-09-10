@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="index.js"></script>
+</head>
+<body>
+		<div id="app">
+			<!-- 申明式渲染模板 -->
+		  	{{ message }}
+		  	<div v-bind:title='title'>
+		  		(｡･∀･)ﾉﾞ嗨 the beautiful girl ,I love you
+		  	</div>
+
+			<!-- if 条件 -->
+		  	<div v-if='show'>you can seen me now</div>
+		  	<div v-if='hidden'>you can not seen me now</div>
+
+		  <!-- for 循环 -->
+		  	<div>
+		  		<li v-for="i in datas">
+		  		{{i.text}}
+		  		</li>
+		  	</div>
+
+		  <!-- v-on 绑定事件监听 处理用户输入 -->
+		  	<div>{{message}}</div>
+		  	<button v-on:click="reverser">click for a suprise</button>
+
+		  <!-- v-model 自动响应表单输入的内容 -->
+		  <div>
+			<input type="text" v-model="message">			
+		  </div>
+
+			<!-- 构建 tudo-item 标签 -->
+			<ul>
+				<tudo-item></tudo-item>
+			</ul>	
+
+			<ul>
+				<myitem v-for="item in datas" v-bind:tudo='item'></myitem>
+			</ul>
+		  <div>
+		  	
+		  </div>
+		</div>
+</body>
+</html>
