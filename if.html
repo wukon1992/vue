@@ -30,9 +30,8 @@
 			<h6>six</h6>
 		</template>
 
-		<p v-show='ok'>v-show 跟v-if 用法基本一样 v-show 类似于display属性</p>
+		<p v-show='ok'>v-show 跟v-if 用法基本一样 v-show 类似于display属性 但是不支持template 后面是否跟v-else 文档似乎说可以但是测试后是不行的</p>
 
-		<p v-else>v-show 跟v-if 用法基本一样 v-show 类似于display属性ok 被定义为false了吧</p>
 		<!-- v-if vs. v-show
 
 		v-if 是真实的条件渲染，因为它会确保条件块在切换当中适当地销毁与重建条件块内的事件监听器和子组件。
