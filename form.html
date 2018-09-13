@@ -66,12 +66,39 @@
 		<input type="checkbox" v-model="toggle" v-bind:true-value="a" v-bind:false-value="b">
 
 		<p>toggle ：{{toggle}}</p>
+
+		<p>#单选框 赋值选中绑定Vue实例中的值</p>
+		<input type="radio" v-model="picked" name="picked" v-bind:value="a" >
+		<input type="radio" v-model="picked" name="picked" v-bind:value="b" >
+		<p>picked：{{ picked }}</p>
 <!-- 
 		// 当选中时
 		app.toggle === app.a
 		// 当没有选中时
 		app.toggle === app.b -->
 
+		<p>#选择列表设置</p>
+		<select name="" v-model="selectedObj" id="">
+			<option v-bind:value="{number:a}">aaaaaa</option>
+		</select>
+		<p>{{ selectedObj.number }}</p>
+		<!-- // 当选中时
+typeof vm.selected // -> 'object'
+vm.selected.number // -> aaaaaa -->
+
+
+		<p>#lazy 修饰符 将input更新转变为change更新 意思是说确定修改点击回车之后会随着更改</p>
+		<!-- 在 "change" 而不是 "input" 事件中更新 -->
+		<input type="text" v-model.lazy="message">
+		<p>{{ message }}</p>
+
+		<p>#number 修饰符 将输入的内容转化为整数number类型 </p>
+		<input type="number" v-model.number="message">
+		<p>{{ message }}</p>
+
+		<p>#trim 修饰符过滤首尾空格字符</p>
+		<input type="text" v-model.trim="message">
+		<p>{{ message }}</p>
 	</div>		
 </body>
 </html>

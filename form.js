@@ -18,6 +18,11 @@ window.onload=function(){
 		    toggle:'',
 		    a:'aaaaaaa',
 		    b:'bbbbbbb',
+
+		    // 列表选项设置
+		    selectedObj:{
+		    	number:2222
+		    }
 		}
 	});
 }
