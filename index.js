@@ -1,6 +1,6 @@
 window.onload = function(){
 	//组件构建应用 个组件实质上是一个拥有预定义选项的一个 Vue 实例
-	Vue.component('tudo-item',{ //组件定义需要在Vue实例化之前
+	Vue.component('tudo-item',{ //全局组件定义需要在Vue实例化之前
 		template:'<li>I Love You</li>'
 	})
 
