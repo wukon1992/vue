@@ -58,6 +58,10 @@
 		<p>两种情况可改变props</p>
 		<h5>1，在组件中定义一个局部的data 并将props的初始值作为data的初始值</h5>
 		<!-- ......... -->
+		<single v-bind:single-stream="3"></single>
+
+		<h5>2,定义一个computed属性，此属性从props中计算得出</h5>
+		<singlet v-bind:single-two = 'a'></singlet>
 	</div>	
 </body>
 </html>

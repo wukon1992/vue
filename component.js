@@ -21,6 +21,24 @@ window.onload=function(){
 		template:'<h2>{{ myMessage }}</h2>',
 	})
 
+	Vue.component('single',{
+		props:['singleStream'],
+		template:'<button v-on:click="count += 1">{{ count }}</button>',
+		data:function(){
+			return {count:this.singleStream} 
+		}
+	});
+
+	Vue.component('singlet',{
+		props:['singleTwo'],
+		template:'<button v-on:click="other">{{other}}</button>',
+		computed:{
+			other:function(){
+				return this.singleTwo.trim().toLowerCase();
+			}
+		}
+	})
+
 
 	var Child = {
 		template:"<h3>我是标题，标题阿三</h3>",
@@ -32,6 +50,7 @@ window.onload=function(){
 
 		data:{
 			message:'',
+			a:'BBBBB'
 		},
 		methods:{
 
