@@ -60,8 +60,12 @@
 		<!-- ......... -->
 		<single v-bind:single-stream="3"></single>
 
-		<h5>2,定义一个computed属性，此属性从props中计算得出</h5>
+		<h5>2,定义一个computed属性，此属性从props中计算得出 将大写转化为小写</h5>
 		<singlet v-bind:single-two = 'a'></singlet>
+
+		<p>props验证:</p>
+		<input type="text" v-model='b'>
+		<check v-bind:prop-a ='b'></check>
 	</div>	
 </body>
 </html>
